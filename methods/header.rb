@@ -33,7 +33,7 @@ def welcome(dental)
     puts
     puts Rainbow(HEADER_LINE).red
     puts "WELCOME TO".center(HEADER_LENGTH)
-    puts "#{dental.name} Booking Site".center(HEADER_LENGTH)
+    puts "#{dental.name} Rental Site".center(HEADER_LENGTH)
     puts Rainbow(HEADER_LINE).red
     puts
 end

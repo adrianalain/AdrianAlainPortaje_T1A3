@@ -11,12 +11,12 @@ class Booking
 
     def display_booking(dental, dental_info)
         puts Rainbow(HEADER_LINE).red
-        puts "#{dental.name.upcase} Appointment".center(HEADER_LENGTH)
+        puts "#{dental.name.upcase}'s Rental".center(HEADER_LENGTH)
         puts Rainbow(HEADER_LINE).red
         puts "Item:  #{@item.type}"
         @item.display_summ
         puts
-        puts "Appointment Days: "
+        puts "Rental Days: "
         @days.each { |day| puts "      #{day}" }
         puts
         puts "#{@days.length} days @ $#{@item.price} each".center(HEADER_LENGTH)

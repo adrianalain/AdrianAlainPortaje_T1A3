@@ -1,15 +1,15 @@
 require 'tty-prompt'
 require 'rainbow'
 require_relative './classes/booking'
-require_relative './classes/dental'
+require_relative './classes/car'
 require_relative './classes/info'
 require_relative './classes/services'
 require_relative './methods/header'
 
-dental = DentalInfo.new.add_items(Checkup.new).add_items(Gum.new).add_items(Children.new)
+car = CarInfo.new.add_items(Klugger.new).add_items(Mustang.new).add_items(MiniCooper.new)
 
 clear
-welcome(dental)
+welcome(car)
 
 #Enter clients name
 
@@ -36,13 +36,13 @@ while user < 2
     end
 end
 
-usr = DentalName.new(user)
+usr = CarName.new(user)
 puts Rainbow("Hello #{usr.name}").red
 
 while true
 
     selection = TTY::Prompt.new.select("How can I help you? Please select: ", cycle: true, marker: '>', echo: false) do |menu|
-        menu.choice('Book an Appointment', 1)
+        menu.choice('Book a Car', 1)
         menu.choice('View Booking', 2)
         menu.choice('View Services', 3)
         menu.choice('View Dental Information', 4)
@@ -52,12 +52,12 @@ while true
         when 1
             if usr.booking
                 clear
-                welcome(dental)
+                welcome(car)
                 puts "You have a booking already"
 
             else
                 new_appointment
-                item = dental.select_item
+                item = car.select_item
 
                 new_appointment
                 item.display_item

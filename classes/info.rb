@@ -2,11 +2,11 @@ require 'tty-prompt'
 require 'rainbow'
 require_relative '../methods/header.rb'
 
-class DentalInfo
+class CarInfo
     attr_reader :items, :name
 
     def initialize
-        @name = "XYZ Dental"
+        @name = "XYZ Car"
         @address = "69 Nowhere Street"
         @items = []
     end

@@ -53,20 +53,20 @@ class Services
     end
 end
 
-    class Checkup < Services
+    class Klugger < Services
         def initialize
-            super("Check-Up and Clean",["Dental Periodic Exam", "Supra-gingival Cleaning and Flouride Treatment", "Bite-wing X-Rays"], 250, {Monday: "Available", Tuesday: "Available", Wednesday: "Available", Thursday: "Available", Friday: "Available", Saturday: "Available", Sunday: "Not Available"})
+            super("Klugger",["2 people capacity", "4-Star Ancap Rating"], 250, {Monday: "Available", Tuesday: "Available", Wednesday: "Available", Thursday: "Available", Friday: "Available", Saturday: "Available", Sunday: "Not Available"})
         end 
     end 
 
-    class Gum < Services
+    class Mustang < Services
         def initialize
-            super("Gum Cleaning",["Helpdetect, treat, and prevent gum disease", "Test for bacteria abd biology that may lead to dental decay"], 400, {Monday: "Available", Tuesday: "Available", Wednesday: "Available", Thursday: "Available", Friday: "Available", Saturday: "Available", Sunday: "Not Available"})
+            super("Mustang",["7 people capacity", "4-Star Ancap Rating"], 400, {Monday: "Available", Tuesday: "Available", Wednesday: "Available", Thursday: "Available", Friday: "Available", Saturday: "Available", Sunday: "Not Available"})
         end 
     end
 
-    class Children < Services
+    class MiniCooper  < Services
         def initialize
-            super("Children's Dentistry",["Oral Hygiene and Diet", "X-rays", "Gum Health", "Dental Developemtn",], 150, {Monday: "Available", Tuesday: "Available", Wednesday: "Available", Thursday: "Available", Friday: "Available", Saturday: "Available", Sunday: "Not Available"})
+            super("Mini Cooper",["5 people capacity", "3-Star Ancap Rating"], 150, {Monday: "Available", Tuesday: "Available", Wednesday: "Available", Thursday: "Available", Friday: "Available", Saturday: "Available", Sunday: "Not Available"})
         end 
     end
