@@ -10,22 +10,20 @@ class Booking
     end 
 
     def display_booking(dental, dental_info)
-        puts rainbow(HEADER_LINE).red
+        puts Rainbow(HEADER_LINE).red
         puts "#{dental.name.upcase} Appointment".center(HEADER_LENGTH)
-        puts rainbow(HEADER_LINE).red
-        puts
-        puts rainbow(HEADER_LINE).red
+        puts Rainbow(HEADER_LINE).red
         puts "Item:  #{@item.type}"
-        @item.display_features
+        @item.display_summ
         puts
         puts "Appointment Days: "
         @days.each { |day| puts "      #{day}" }
         puts
-        puts "#{@days.length} days @ $#{@item.price} each".rjust(HEADER_LENGTH)
-        puts "Total Price: $#{'%.2f' % price}".rjust(HEADER_LENGTH)
+        puts "#{@days.length} days @ $#{@item.price} each".center(HEADER_LENGTH)
+        puts "Total Price: $#{'%.2f' % price}".center(HEADER_LENGTH)
     end
     #calculating booking price
     def price
-        return @item.booking_price.to.f * @days.length
+        return @item.price.to_f * @days.length
     end
 end

@@ -15,9 +15,9 @@ welcome(dental)
 
 puts "Please provide your name: "
 
-user_name = 0
+user = 0
 
-while user_name < 2
+while user < 2
     user = gets.chomp.capitalize
 
     if user != " "
@@ -25,8 +25,8 @@ while user_name < 2
         break
 
     else
-        user_name += 1
-        if user_name == 2
+        user += 1
+        if user == 2
             clear
             puts "You didn't put name"
             user = "No Name"
@@ -37,12 +37,11 @@ while user_name < 2
 end
 
 usr = DentalName.new(user)
-puts "Hello #{usr.name}"
+puts Rainbow("Hello #{usr.name}").red
 
 while true
 
-    welcome(dental)
-    selection = TTY::Prompt.new.select("How can I help you? Please select: ", cycle = true, marker: '>', echo: false) do |menu|
+    selection = TTY::Prompt.new.select("How can I help you? Please select: ", cycle: true, marker: '>', echo: false) do |menu|
         menu.choice('Book an Appointment', 1)
         menu.choice('View Booking', 2)
         menu.choice('View Services', 3)
@@ -82,14 +81,14 @@ while true
         when 5
             if usr.booking
                 clear
-                puts "Thank you #{user}"
-                puts "We look forward on seeing you on #{usr.booking.days[0]}"
+                puts Rainbow("Thank you #{user}").red
+                puts Rainbow("We look forward on seeing you on #{usr.booking.days[0]}").red
                 return
 
             else
                 clear
-                puts "Thank you #{user}"
-                puts "Have a wonderful day!"
+                puts Rainbow("Thank you #{user}").red
+                puts Rainbow("Have a wonderful day!").red
                 return
             end
         end

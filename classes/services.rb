@@ -38,7 +38,7 @@ class Services
     def selecting_days_avail(days_avail)
         @avail.each do |day, status|
             if status != "Available"
-                days_avail.push{{name: days.to_s, disabled: "Booked"}}
+                days_avail.push{{name: days.to_s, disabled: "Closed"}}
             else
                 days_avail.push(name: day.to_s)
             end
@@ -46,7 +46,7 @@ class Services
     end
 
     def selecting_days_select(days_avail, days_select)
-        TTY::Prompt.new.multi_select("Please select the day you want to book: ", days_avail, cycle = true, marker: '>', echo: false, per_page: 7).each do |day|
+        TTY::Prompt.new.multi_select("Please select the day you want to book: ", days_avail, cycle: true, marker: '>', echo: false, per_page: 7).each do |day|
             @avail[day.to_sym] = "Not Available"
             days_select.push(day)
         end
@@ -55,18 +55,18 @@ end
 
     class Checkup < Services
         def initialize
-            super("Check-Up and Clean",["Dental Periodic Exam", "Supra-gingival Cleaning and Flouride Treatment", "Bite-wing X-Rays"], 250, {Monday: "Available", Tuesday: "Available", Wednesday: "Available", Thursday: "Available", Friday: "Available", Saturday: "Available", Sunday: "Closed"})
+            super("Check-Up and Clean",["Dental Periodic Exam", "Supra-gingival Cleaning and Flouride Treatment", "Bite-wing X-Rays"], 250, {Monday: "Available", Tuesday: "Available", Wednesday: "Available", Thursday: "Available", Friday: "Available", Saturday: "Available", Sunday: "Not Available"})
         end 
     end 
 
     class Gum < Services
         def initialize
-            super("Gum Cleaning",["Helpdetect, treat, and prevent gum disease", "Test for bacteria abd biology that may lead to dental decay"], 400, {Monday: "Available", Tuesday: "Available", Wednesday: "Available", Thursday: "Available", Friday: "Available", Saturday: "Available", Sunday: "Closed"})
+            super("Gum Cleaning",["Helpdetect, treat, and prevent gum disease", "Test for bacteria abd biology that may lead to dental decay"], 400, {Monday: "Available", Tuesday: "Available", Wednesday: "Available", Thursday: "Available", Friday: "Available", Saturday: "Available", Sunday: "Not Available"})
         end 
     end
 
     class Children < Services
         def initialize
-            super("Children's Dentistry",["Oral Hygiene and Diet", "X-rays", "Gum Health", "Dental Developemtn",], 150, {Monday: "Available", Tuesday: "Available", Wednesday: "Available", Thursday: "Available", Friday: "Available", Saturday: "Available", Sunday: "Closed"})
+            super("Children's Dentistry",["Oral Hygiene and Diet", "X-rays", "Gum Health", "Dental Developemtn",], 150, {Monday: "Available", Tuesday: "Available", Wednesday: "Available", Thursday: "Available", Friday: "Available", Saturday: "Available", Sunday: "Not Available"})
         end 
     end
