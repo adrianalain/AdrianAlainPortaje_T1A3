@@ -44,9 +44,8 @@ while true
     selection = TTY::Prompt.new.select("How can I help you? Please select(Spacebar to choose): ", cycle: true, marker: '>', echo: false) do |menu|
         menu.choice('Book a Car', 1)
         menu.choice('View Booking', 2)
-        menu.choice('View Services', 3)
-        menu.choice('View Car Information', 4)
-        menu.choice('Exit', 5)
+        menu.choice('View Car Rental Information', 3)
+        menu.choice('Exit', 4)
 
         case selection
         when 1
@@ -89,7 +88,12 @@ while true
                 puts Rainbow("You don't have a booking yet").red
                 puts
             end
-        when 5
+        when 3
+            clear
+            car.info
+            main_menu
+
+        when 4
             if usr.booking
                 clear
                 puts Rainbow("Thank you #{user}").red

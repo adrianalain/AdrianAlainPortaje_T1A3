@@ -47,3 +47,4 @@ def new_appointment
     puts Rainbow(HEADER_LINE).red
     puts
 end
+

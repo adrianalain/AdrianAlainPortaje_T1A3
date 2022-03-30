@@ -12,13 +12,13 @@ class Services
     end
 
     def display_item
-        puts "Service: #{@type}"
+        puts "Car: #{@type}"
         puts "Price: $#{@price}"
     end
 
     def display_summ
         puts "Summary: "
-        @summ.each { |summary| puts "    #{summ}"}
+        @summ.each { |summary| puts "    #{summary}"}
     end
 
     def display_avail
@@ -34,7 +34,7 @@ class Services
         return days_select
     end
 
-    #it will take the items availability and formatis to tty-prompt
+    #it will take the items availability and formats to tty-prompt
     def selecting_days_avail(days_avail)
         @avail.each do |day, status|
             if status != "Available"
