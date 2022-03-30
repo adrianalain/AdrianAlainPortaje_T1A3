@@ -39,7 +39,7 @@ def welcome(dental)
 end
 
 # header for when placing a new booking
-def new_booking_header
+def new_appointment
     clear
     puts
     puts Rainbow(HEADER_LINE).red
