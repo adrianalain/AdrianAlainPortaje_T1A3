@@ -6,10 +6,10 @@ require_relative './classes/info'
 require_relative './classes/services'
 require_relative './methods/header'
 
-info = DentalInfo.new.add_items(Checkup.new).add_items(Gum.new).add_items(Children.new)
+dental = DentalInfo.new.add_items(Checkup.new).add_items(Gum.new).add_items(Children.new)
 
 clear
-welcome(info)
+welcome(dental)
 
 #Enter clients name
 
@@ -36,13 +36,13 @@ while user_name < 2
     end
 end
 
-usr = Usr.new(user)
+usr = DentalName.new(user)
 puts "Hello #{usr.name}"
 
 while true
 
-    welcome(dental_info)
-    selection = TTY:Prompt.new.select("How can I help you? Please select: ", cycle = true, marker: '>', echo: false) do |menu|
+    welcome(dental)
+    selection = TTY::Prompt.new.select("How can I help you? Please select: ", cycle = true, marker: '>', echo: false) do |menu|
         menu.choice('Book an Appointment', 1)
         menu.choice('View Booking', 2)
         menu.choice('View Services', 3)
@@ -53,7 +53,7 @@ while true
         when 1
             if usr.booking
                 clear
-                welcome(dental_info)
+                welcome(dental)
                 puts "You have a booking already"
 
             else

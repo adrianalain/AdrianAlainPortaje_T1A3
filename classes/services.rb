@@ -51,22 +51,22 @@ class Services
             days_select.push(day)
         end
     end
+end
 
     class Checkup < Services
         def initialize
-            super("Check-Up and Clean"["Dental Periodic Exam", "Supra-gingival Cleaning and Flouride Treatment", "Bite-wing X-Rays"], 250, {Monday: "Available", Tuesday: "Available", Wednesday: "Available", Thursday: "Available", Friday: "Available", Saturday: "Available", Sunday: "Closed"})
+            super("Check-Up and Clean",["Dental Periodic Exam", "Supra-gingival Cleaning and Flouride Treatment", "Bite-wing X-Rays"], 250, {Monday: "Available", Tuesday: "Available", Wednesday: "Available", Thursday: "Available", Friday: "Available", Saturday: "Available", Sunday: "Closed"})
         end 
     end 
 
     class Gum < Services
         def initialize
-            super("Gum Cleaning"["Helpdetect, treat, and prevent gum disease", "Test for bacteria abd biology that may lead to dental decay"], 400, {Monday: "Available", Tuesday: "Available", Wednesday: "Available", Thursday: "Available", Friday: "Available", Saturday: "Available", Sunday: "Closed"})
+            super("Gum Cleaning",["Helpdetect, treat, and prevent gum disease", "Test for bacteria abd biology that may lead to dental decay"], 400, {Monday: "Available", Tuesday: "Available", Wednesday: "Available", Thursday: "Available", Friday: "Available", Saturday: "Available", Sunday: "Closed"})
         end 
     end
 
     class Children < Services
         def initialize
-            super("Children's Dentistry"["Oral Hygiene and Diet", "X-rays", "Gum Health", "Dental Developemtn",], 150, {Monday: "Available", Tuesday: "Available", Wednesday: "Available", Thursday: "Available", Friday: "Available", Saturday: "Available", Sunday: "Closed"})
+            super("Children's Dentistry",["Oral Hygiene and Diet", "X-rays", "Gum Health", "Dental Developemtn",], 150, {Monday: "Available", Tuesday: "Available", Wednesday: "Available", Thursday: "Available", Friday: "Available", Saturday: "Available", Sunday: "Closed"})
         end 
     end
-end

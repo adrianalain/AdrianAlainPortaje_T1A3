@@ -20,21 +20,21 @@ end
 def loading_screen(string)                                           
     string.length.times do |i| 
         clear
-        puts rainbow(HEADER_LINE).red
+        puts Rainbow(HEADER_LINE).red
         puts "Please Wait...".upcase.center(HEADER_LENGTH)
-        puts rainbow(HEADER_LINE).red
+        puts Rainbow(HEADER_LINE).red
         puts
         sleep(0.1)
     end
 end
 
 
-def welcome(hotel)
+def welcome(dental)
     puts
-    puts rainbow(HEADER_LINE).red
+    puts Rainbow(HEADER_LINE).red
     puts "WELCOME TO".center(HEADER_LENGTH)
-    puts "#{hotel.name} Booking Site".center(HEADER_LENGTH)
-    puts rainbow(HEADER_LINE).red
+    puts "#{dental.name} Booking Site".center(HEADER_LENGTH)
+    puts Rainbow(HEADER_LINE).red
     puts
 end
 
@@ -42,8 +42,8 @@ end
 def new_booking_header
     clear
     puts
-    puts rainbow(HEADER_LINE).red
+    puts Rainbow(HEADER_LINE).red
     puts "Create a new booking!".upcase.center(HEADER_LENGTH)
-    puts rainbow(HEADER_LINE).red
+    puts Rainbow(HEADER_LINE).red
     puts
 end

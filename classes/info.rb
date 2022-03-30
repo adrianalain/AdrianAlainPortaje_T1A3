@@ -16,8 +16,8 @@ class DentalInfo
         puts rainbow(HEADER_LINE).red
     end
     #adds dental items
-    def add_items
-        @items << items
+    def add_items(item)
+        @items << item
         return self
     end
 
