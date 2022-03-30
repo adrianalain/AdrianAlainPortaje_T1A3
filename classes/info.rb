@@ -26,7 +26,7 @@ class CarInfo
         menu = []
         @items.each { |item| menu.push(item.type)}
     #Displays menu using tty prompt
-    selects = TTY::Prompt.new.select("Choose an item: ",menu, cycle: true, marker: ">", echo: false)
+    selects = TTY::Prompt.new.select("Choose an car: ",menu, cycle: true, marker: ">", echo: false)
         items.each{ |item| return item if item.type == selects }
     end
 end
