@@ -15,13 +15,13 @@ class CarInfo
         puts "#{name.upcase}".center(HEADER_LENGTH)
         puts Rainbow(HEADER_LINE).red
     end
-    #adds dental items
+    #adds car items
     def add_items(item)
         @items << item
         return self
     end
 
-    #Selecting a dental item
+    #Selecting a car item
     def select_item
         menu = []
         @items.each { |item| menu.push(item.type)}

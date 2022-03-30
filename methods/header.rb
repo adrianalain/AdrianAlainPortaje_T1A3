@@ -29,11 +29,11 @@ def loading_screen(string)
 end
 
 
-def welcome(dental)
+def welcome(car)
     puts
     puts Rainbow(HEADER_LINE).red
     puts "WELCOME TO".center(HEADER_LENGTH)
-    puts "#{dental.name} Rental Site".center(HEADER_LENGTH)
+    puts "#{car.name} Rental Site".center(HEADER_LENGTH)
     puts Rainbow(HEADER_LINE).red
     puts
 end

@@ -38,14 +38,14 @@ end
 
 usr = CarName.new(user)
 puts Rainbow("Hello #{usr.name}").red
-
+puts 
 while true
 
-    selection = TTY::Prompt.new.select("How can I help you? Please select: ", cycle: true, marker: '>', echo: false) do |menu|
+    selection = TTY::Prompt.new.select("How can I help you? Please select(Spacebar to choose): ", cycle: true, marker: '>', echo: false) do |menu|
         menu.choice('Book a Car', 1)
         menu.choice('View Booking', 2)
         menu.choice('View Services', 3)
-        menu.choice('View Dental Information', 4)
+        menu.choice('View Car Information', 4)
         menu.choice('Exit', 5)
 
         case selection
@@ -53,8 +53,8 @@ while true
             if usr.booking
                 clear
                 welcome(car)
-                puts "You have a booking already"
-
+                puts Rainbow("You have a booking already").red
+                puts
             else
                 new_appointment
                 item = car.select_item
@@ -77,6 +77,17 @@ while true
                 puts "Thank you for appointment"
                 usr.booking.display_booking(usr,item)
                 main_menu
+            end
+        when 2
+            if usr.booking
+                clear
+                usr.booking.display_booking(usr, car)
+                main_menu
+            else
+                clear
+                welcome(car)
+                puts Rainbow("You don't have a booking yet").red
+                puts
             end
         when 5
             if usr.booking

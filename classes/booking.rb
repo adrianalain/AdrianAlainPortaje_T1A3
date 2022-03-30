@@ -13,7 +13,7 @@ class Booking
         puts Rainbow(HEADER_LINE).red
         puts "#{dental.name.upcase}'s Rental".center(HEADER_LENGTH)
         puts Rainbow(HEADER_LINE).red
-        puts "Item:  #{@item.type}"
+        puts "Car:  #{@item.type}"
         @item.display_summ
         puts
         puts "Rental Days: "
