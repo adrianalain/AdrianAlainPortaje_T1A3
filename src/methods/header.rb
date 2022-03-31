@@ -21,10 +21,10 @@ def loading_screen(string)
     string.length.times do |i| 
         clear
         puts Rainbow(HEADER_LINE).red
-        puts "Please Wait...".upcase.center(HEADER_LENGTH)
+        puts "Loading.......".upcase.center(HEADER_LENGTH)
         puts Rainbow(HEADER_LINE).red
         puts
-        sleep(0.1)
+        sleep(0.2)
     end
 end
 

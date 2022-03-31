@@ -12,7 +12,6 @@ clear
 welcome(car)
 
 #Enter clients name
-
 puts "Please provide your name: "
 
 user = 0
@@ -20,7 +19,7 @@ user = 0
 while user < 2
     user = gets.chomp.capitalize
 
-    if user != " "
+    if user != ""
         clear
         break
 
@@ -70,7 +69,7 @@ while true
                 end
 
                 usr.booking = Booking.new(item, appointment_days)
-                loading_screen("Loading....")
+                loading_screen("Loading......")
 
                 clear
                 puts "Thank you for appointment"

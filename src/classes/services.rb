@@ -47,7 +47,7 @@ class Services
 
     def selecting_days_select(days_avail, days_select)
         TTY::Prompt.new.multi_select("Please select the day you want to book: ", days_avail, cycle: true, marker: '>', echo: false, per_page: 7).each do |day|
-            @avail[day.to_sym] = "Not Available"
+            @avail[day.to_s] = "Not Available"
             days_select.push(day)
         end
     end

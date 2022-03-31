@@ -19,8 +19,8 @@ class Booking
         puts "Rental Days: "
         @days.each { |day| puts "      #{day}" }
         puts
-        puts "#{@days.length} days @ $#{@item.price} each".center(HEADER_LENGTH)
-        puts "Total Price: $#{'%.2f' % price}".center(HEADER_LENGTH)
+        puts "#{@days.length} days @ $#{@item.price} each".ljust(HEADER_LENGTH)
+        puts "Total Price: $#{'%.2f' % price}".ljust(HEADER_LENGTH)
     end
     #calculating booking price
     def price
