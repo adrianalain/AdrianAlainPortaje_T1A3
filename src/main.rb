@@ -11,7 +11,7 @@ car = CarInfo.new.add_items(Klugger.new).add_items(Mustang.new).add_items(MiniCo
 clear
 welcome(car)
 
-#Enter clients name
+# Enter clients name
 puts "Please provide your name: "
 
 user = 0
@@ -40,7 +40,6 @@ puts Rainbow("Hello #{usr.name}").red
 puts 
 
 while true
-    welcome(car)
     selection = TTY::Prompt.new.select("How can I help you? Please select(Spacebar to choose): ", cycle: true, marker: '>', echo: false) do |menu|
         menu.choice('Book a Car', 1)
         menu.choice('View Booking', 2)
