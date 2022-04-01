@@ -1,6 +1,6 @@
 require 'tty-prompt'
 require 'rainbow'
-require_relative '../methods/header.rb'
+require_relative './header'
 
 class CarInfo
     attr_reader :items, :name

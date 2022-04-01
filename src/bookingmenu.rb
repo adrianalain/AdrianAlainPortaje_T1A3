@@ -1,0 +1,75 @@
+require 'tty-prompt'
+require 'rainbow'
+require_relative './login'
+require_relative './booking'
+require_relative './car'
+require_relative './info'
+require_relative './services'
+require_relative './header'
+
+
+def booking_menu_options(username)
+usr = CarName.new(username)
+car = CarInfo.new.add_items(Klugger.new).add_items(Mustang.new).add_items(MiniCooper.new)
+clear
+welcome(car)
+
+while true
+    selection = TTY::Prompt.new.select("How can I help you? Please select(Spacebar to choose): ", cycle: true, marker: '>', echo: false) do |menu|
+        menu.choice('Book a Car', 1)
+        menu.choice('View Booking', 2)
+        menu.choice('View Car Rental Information', 3)
+        menu.choice('Logout', 4)
+    case selection
+    when 1
+        if usr.booking
+            clear
+            welcome(car)
+            puts Rainbow("You have a booking already").red
+            puts
+        else
+            new_appointment
+            item = car.select_item
+
+            new_appointment
+            item.display_item
+            item.display_summ
+            appointment_days = item.selecting_days
+
+            while appointment_days.length == 0
+                new_appointment
+                puts "No days selected"
+                appointment_days = item.selecting_days
+            end
+
+            usr.booking = Booking.new(item, appointment_days)
+            loading_screen("Loading......")
+
+            clear
+            puts "Thank you for appointment"
+                usr.booking.display_booking(usr,item)
+                main_menu
+            end
+    when 2
+        if usr.booking
+            clear
+            usr.booking.display_booking(usr, car)
+            main_menu
+        else
+            clear
+            welcome(car)
+            puts Rainbow("You don't have a booking yet").red
+            puts
+        end
+    when 3
+        clear
+        car.info
+        main_menu
+    when 4
+        puts
+        puts Rainbow("You have successfully logged out.").blue
+        main_menu_options
+    end
+end
+end
+end

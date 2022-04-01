@@ -1,5 +1,5 @@
 require 'rainbow'
-require_relative '../methods/header.rb'
+require_relative './header'
 
 class Booking
     attr_reader :days
