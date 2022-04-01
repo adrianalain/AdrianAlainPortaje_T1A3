@@ -15,25 +15,7 @@ welcome(car)
 puts "Please provide your name: "
 
 user = 0
-
-while user < 2
-    user = gets.chomp.capitalize
-
-    if user != ""
-        clear
-        break
-
-    else
-        user += 1
-        if user == 2
-            clear
-            puts "You didn't put name"
-            user = "No Name"
-        else
-            puts "Please enter your name: "
-        end
-    end
-end
+user = gets.chomp.capitalize
 
 usr = CarName.new(user)
 puts Rainbow("Hello #{usr.name}").red
@@ -91,7 +73,6 @@ while true
             clear
             car.info
             main_menu
-
         when 4
             if usr.booking
                 clear
