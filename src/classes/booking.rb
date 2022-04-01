@@ -9,9 +9,9 @@ class Booking
         @days = days
     end 
 
-    def display_booking(dental, dental_info)
+    def display_booking(car, car_info)
         puts Rainbow(HEADER_LINE).red
-        puts "#{dental.name.upcase}'s Rental".center(HEADER_LENGTH)
+        puts "#{car.name.upcase}'s Rental".center(HEADER_LENGTH)
         puts Rainbow(HEADER_LINE).red
         puts "Car:  #{@item.type}"
         @item.display_summ

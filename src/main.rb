@@ -38,8 +38,9 @@ end
 usr = CarName.new(user)
 puts Rainbow("Hello #{usr.name}").red
 puts 
-while true
 
+while true
+    welcome(car)
     selection = TTY::Prompt.new.select("How can I help you? Please select(Spacebar to choose): ", cycle: true, marker: '>', echo: false) do |menu|
         menu.choice('Book a Car', 1)
         menu.choice('View Booking', 2)
