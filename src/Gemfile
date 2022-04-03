@@ -13,3 +13,7 @@ gem "font-awesome-rails", "~> 4.7"
 gem "rubocop", "~> 1.26"
 
 gem "ruby-progressbar", "~> 1.11"
+
+gem "tty-font", "~> 0.5.0"
+
+gem "pastel", "~> 0.8.0"

@@ -14,4 +14,15 @@ I've used trello for planning my tasks and which prioties comes first. Other tas
 # Installation
 1. You will need to have a ruby installed in your computer. If you don't have one, download [Ruby here](https://www.ruby-lang.org/en/).
 2. Clone the repository in your local computer. Here's how you can clone it. [Clone Repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
-3. 
+3. To run the program navigate the src folder file and run ./booking_terminal.sh and it will automatically install the gem file as well.
+
+# Gems
+- Rainbow
+
+- tty-Prompt
+
+- rubocop
+
+- tty-font
+
+- pastel

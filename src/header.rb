@@ -1,6 +1,7 @@
 require 'tty-prompt'
 require 'rainbow'
-
+require 'tty-font'
+require 'pastel'
 
 HEADER_LINE = ("--------------------------------------------------------------")
 HEADER_LENGTH = HEADER_LINE.length
@@ -30,10 +31,12 @@ end
 
 
 def welcome(car)
+    font = TTY::Font.new(:standard)
+    pastel = Pastel.new
     puts
     puts Rainbow(HEADER_LINE).red
-    puts "WELCOME TO".center(HEADER_LENGTH)
-    puts "#{car.name} Rental Site".center(HEADER_LENGTH)
+    puts pastel.cyan(font.write("WELCOME TO", font_size: 12)).center(HEADER_LENGTH)
+    puts pastel.cyan(font.write("#{car.name} Rental Site")).center(HEADER_LENGTH)
     puts Rainbow(HEADER_LINE).red
     puts
 end
