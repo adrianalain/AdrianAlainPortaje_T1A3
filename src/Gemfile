@@ -11,3 +11,5 @@ gem "tty-prompt", "~> 0.23.1"
 gem "font-awesome-rails", "~> 4.7"
 
 gem "rubocop", "~> 1.26"
+
+gem "ruby-progressbar", "~> 1.11"
