@@ -98,7 +98,6 @@ DEPENDENCIES
   pastel (~> 0.8.0)
   rainbow (~> 3.1)
   rubocop (~> 1.26)
-  ruby-progressbar (~> 1.11)
   tty-font (~> 0.5.0)
   tty-prompt (~> 0.23.1)
 
