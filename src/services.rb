@@ -53,20 +53,20 @@ class Services
     end
 end
 
-    class Klugger < Services
-        def initialize
-            super("Klugger",["7 people capacity", "4-Star Ancap Rating"], 250, {Monday: "Available", Tuesday: "Available", Wednesday: "Available", Thursday: "Available", Friday: "Available", Saturday: "Available", Sunday: "Available"})
-        end 
+class Klugger < Services
+    def initialize
+        super("Klugger",["7 people capacity", "4-Star Ancap Rating"], 250, {Monday: "Available", Tuesday: "Available", Wednesday: "Available", Thursday: "Available", Friday: "Available", Saturday: "Available", Sunday: "Available"})
     end 
+end 
 
-    class Mustang < Services
-        def initialize
-            super("Mustang",["2 people capacity", "4-Star Ancap Rating"], 400, {Monday: "Available", Tuesday: "Available", Wednesday: "Available", Thursday: "Available", Friday: "Available", Saturday: "Available", Sunday: "Available"})
-        end 
-    end
+class Mustang < Services
+    def initialize
+        super("Mustang",["2 people capacity", "4-Star Ancap Rating"], 400, {Monday: "Available", Tuesday: "Available", Wednesday: "Available", Thursday: "Available", Friday: "Available", Saturday: "Available", Sunday: "Available"})
+    end 
+end
 
-    class MiniCooper  < Services
-        def initialize
-            super("Mini Cooper",["5 people capacity", "3-Star Ancap Rating"], 150, {Monday: "Available", Tuesday: "Available", Wednesday: "Available", Thursday: "Available", Friday: "Available", Saturday: "Available", Sunday: "Available"})
-        end 
-    end
+class MiniCooper  < Services
+    def initialize
+        super("Mini Cooper",["5 people capacity", "3-Star Ancap Rating"], 150, {Monday: "Available", Tuesday: "Available", Wednesday: "Available", Thursday: "Available", Friday: "Available", Saturday: "Available", Sunday: "Available"})
+    end 
+end

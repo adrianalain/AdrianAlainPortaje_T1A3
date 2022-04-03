@@ -1,3 +1,5 @@
+require 'tty-prompt'
+require_relative './createacct'
 def main_menu_options
 while true
   acct = TTY::Prompt.new.select("Please login if you have an existing account.(Spacebar to choose): ", cycle: true, marker: '>', echo: true) do |menu|

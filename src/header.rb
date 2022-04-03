@@ -18,7 +18,7 @@ def main_menu
 end
 
 def loading_screen(string)                                           
-    string.length.times do |i| 
+    string.length.times do |load| 
         clear
         puts Rainbow(HEADER_LINE).red
         puts "Loading.......".upcase.center(HEADER_LENGTH)

@@ -7,3 +7,7 @@ source "https://rubygems.org"
 gem "rainbow", "~> 3.1"
 
 gem "tty-prompt", "~> 0.23.1"
+
+gem "font-awesome-rails", "~> 4.7"
+
+gem "rubocop", "~> 1.26"

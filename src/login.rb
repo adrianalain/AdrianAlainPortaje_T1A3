@@ -7,7 +7,6 @@ def login
     vpass = gets.chomp
     File.open("credentials.txt", "r") do |file|
     isValidUser = file.read().include? "#{vuser}, #{vpass}"
-    puts "#{vuser}, #{vpass}"
     if isValidUser == true
         puts
         puts Rainbow("Succesfully Login").green
